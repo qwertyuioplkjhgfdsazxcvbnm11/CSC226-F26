@@ -57,6 +57,7 @@ public class StudentAdditionalTests {
         assertTrue(registry.removePatient("P001"));
         assertNull(registry.getPatientByID("P001"));
     }
+    //patient needs to be removable via id
 
     @Test
     void testRemovePatientInvalidString() {
@@ -64,6 +65,7 @@ public class StudentAdditionalTests {
         assertFalse(registry.removePatient("P002"));
         assertNotNull(registry.getPatientByID("P001"));
     }
+    //patient should not be removed when submitting an invalid patient id
 
     @Test
     void testRemovePatientInt() {
@@ -71,6 +73,7 @@ public class StudentAdditionalTests {
         assertNotNull(registry.removePatient(0));
         assertNull(registry.getPatientByID("P001"));
     }
+    //patient needs to be removable via index
 
     @Test
     void testRemovePatientInvalidInt() {
@@ -78,6 +81,7 @@ public class StudentAdditionalTests {
         assertNull(registry.removePatient(2));
         assertNotNull(registry.getPatientByID("P001"));
     }
+    //patient should not be removed when submitting an invalid patient index
 
     @Test
     void testUpdatePatient() {
@@ -99,6 +103,7 @@ public class StudentAdditionalTests {
         assertEquals("Woman", registry.getPatientByID("P001").getLastName());
         assertEquals("Heart break", registry.getPatientByID("P001").getChiefComplaint());
     }
+    //you need to be able to update patients in case their status changes
 
     @Test
     void testGetPatientRegistry() {
@@ -112,5 +117,6 @@ public class StudentAdditionalTests {
         assertEquals("P003", patients[2].getPatientID());
         assertEquals(3, patients.length);
     }
+    //if you cannot get the registry it is useless
 
 }
