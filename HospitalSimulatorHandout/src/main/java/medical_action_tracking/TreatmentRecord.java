@@ -13,22 +13,22 @@ public class TreatmentRecord {
 
     public String getPatientID() {
         // TODO: Return the patient ID.
-        return null;
+        return this.patientID;
     }
 
     public String getTreatmentName() {
         // TODO: Return the treatment description.
-        return null;
+        return this.treatmentName;
     }
 
     public String getTimestamp() {
         // TODO: Return the timestamp.
-        return null;
+        return this.timestamp;
     }
 
     @Override
     public String toString() {
         // TODO: Return "timestamp | patientID | treatmentName".
-        return "";
+        return this.timestamp + " | " + this.patientID + " | " + this.treatmentName;
     }
 }

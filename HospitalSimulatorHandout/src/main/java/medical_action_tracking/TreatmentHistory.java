@@ -20,7 +20,7 @@ public class TreatmentHistory {
      */
     public TreatmentRecord undoLastAction() {
         // TODO: Pop and return the newest record. Empty pop returns null.
-        return null;
+        return allRecords.pop();
     }
 
     /**
@@ -28,6 +28,6 @@ public class TreatmentHistory {
      */
     public String displayHistory() {
         // TODO: Use the stack's top-to-bottom string representation.
-        return "[]";
+        return allRecords.toString();
     }
 }
